@@ -1,35 +1,3 @@
-# 🔗 Deep Linking, Universal Links & App Links in React Native (No Firebase)
-
-A complete guide + working example for implementing **deep linking, universal links, and app links** in a React Native app using a **Node.js backend**, without Firebase Dynamic Links.
-
-Firebase Dynamic Links have become unreliable in recent updates — so this repo provides a **clean, stable, and professional alternative** that works on both **Android** and **iOS**.
-
----
-
-## 🚀 Features
-- ✅ Works across **Android and iOS**
-- ⚙️ Uses a simple **Node.js + Express backend**
-- 🌐 Hosted on **Vercel**
-- 🔒 Supports verified domains via `assetlinks.json` and `apple-app-site-association`
-- 💡 Easy integration into any existing React Native project
-
----
-
-## 🧠 How It Works
-1.[ A user clicks a link like this](https://car-fam-usa.vercel.app/)
-
-2. The **backend (Node.js)** hosts the required JSON verification files for Android and iOS.
-3. The OS verifies the link belongs to your app.
-4. The **React Native app** intercepts the URL and navigates to the correct screen.
-
-
-## 2.Backend Setup (Node.js)
- - Folder structure should be
-  ![BAckend](./assets/structure.png)
-  - get the vercel file from backend directory
-- Create a minimal Express server:
-
-<pre> ``` 
 const express = require('express');
 const path = require('path');
 
@@ -94,18 +62,4 @@ app.get("*", (req, res) => {
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
-});  ``` </pre>
-
-
-## 3. Android Setup
-
-Open android/app/src/main/AndroidManifest.xml
-  or use Android Stuio App Links Assistant
-  ![android stuio](./assets/android.png)
-  
-  - Add Intent filters using app links assistant
-  ![android intent filter](./assets/assestLinks.png)
-
- ### Linking Config on React Native Part
-  - you can get the file from frontEnd directory (named: linkingConfig)
-
+}); 
