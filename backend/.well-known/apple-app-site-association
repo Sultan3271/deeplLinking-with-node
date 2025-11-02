@@ -1,0 +1,11 @@
+{
+    "applinks": {
+      "apps": [],
+      "details": [
+        {
+          "appID": "appstoreConnectId.org.reactjs.native.example.appname",
+        "paths": [ "*" ]
+        }
+      ]
+    }
+  }

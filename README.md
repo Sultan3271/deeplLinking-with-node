@@ -106,6 +106,20 @@ Open android/app/src/main/AndroidManifest.xml
   - Add Intent filters using app links assistant
   ![android intent filter](./assets/assestLinks.png)
 
+  or you can visit official website [ link](https://reactnavigation.org/docs/deep-linking/)
+
  ### Linking Config on React Native Part
   - you can get the file from frontEnd directory (named: linkingConfig)
+
+
+### iOS Setup
+
+Open your react native project in xcode using 'xed ios' command in root project directory
+
+- go to sign in & capabilites  and add your domain in associated domains (applinks:domainname.com)
+
+- open AppDelegate.mm or .swift file(new architecture) and add RCT linking code 
+visit this link to get the latest code [ link](https://reactnavigation.org/docs/deep-linking/) inside this page find 
+  ![android stuio](./assets/rct.png)
+   paste in the file
 
